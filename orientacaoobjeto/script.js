@@ -10,11 +10,13 @@ class Botao {
         novoBotaoDom.setAttribute('class', `${this.cor} ${this.tamanho}`)
         novoBotaoDom.innerHTML = this.texto
         document.getElementById('button-section').appendChild(novoBotaoDom)
+        console.log(novoBotaoDom);
     }
 };
 
 let novoBotao =  new Botao('roxo','grande','Default')
 novoBotao.desenhaBotao();
+
 
 let botaoRoxo = new Botao('transparente', 'grande','Default')
 botaoRoxo.desenhaBotao();

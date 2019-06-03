@@ -32,12 +32,12 @@ button.pequeno{
 }
 
 .transparente{
-    background-color: rgb(207, 204, 204); 
+    background-color: rgb(239, 230, 247); 
     color:  hsl(273, 60%, 48%);
 }
 
 .borda-roxa{
     border: 2px solid hsl(273, 60%, 48%); 
-    background-color:whitesmoke;
+    background-color: transparent;
     color:hsl(273, 60%, 48%);
 }
