@@ -1,0 +1,43 @@
+body{
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+button{
+    border:none;    
+    margin-left: 20px; 
+    margin-bottom:20px; 
+    border-radius: 6%; 
+    text-transform: uppercase;
+    color:#ffff;
+    font-weight: bold; 
+    width: 20%;
+}
+
+#button-section{
+    display: flex;
+    flex-direction: column; 
+}
+
+button.grande{
+    padding: 15px 45px;
+}
+
+button.pequeno{
+    padding: 10px 15px; 
+}
+
+.roxo{
+    background-color: hsl(273, 60%, 48%);
+}
+
+.transparente{
+    background-color: rgb(207, 204, 204); 
+    color:  hsl(273, 60%, 48%);
+}
+
+.borda-roxa{
+    border: 2px solid hsl(273, 60%, 48%); 
+    background-color:whitesmoke;
+    color:hsl(273, 60%, 48%);
+}
