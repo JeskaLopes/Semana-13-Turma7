@@ -1,17 +1,29 @@
 class Botao {
-    constructor(cor, tamanho, texto){
-        this.cor = cor;
-        this.tamanho=tamanho;
-        this.texto=texto;
+    constructor(cor, tamanho, texto, icone){
+        this.cor = cor,
+        this.tamanho=tamanho,
+        this.texto=texto,
+        this.icone=icone
     }
 
     desenhaBotao(){
         const novoBotaoDom = document.createElement('button')
         novoBotaoDom.setAttribute('class', `${this.cor} ${this.tamanho}`)
-        novoBotaoDom.innerHTML = this.texto
         document.getElementById('button-section').appendChild(novoBotaoDom)
         console.log(novoBotaoDom);
+
+        if(this.icone){
+            const tagIcone = document.createElement("i")
+            tagIcone.setAttribute('class', `fas ${this.icone}`)
+            novoBotaoDom.appendChild(tagIcone)
+            const text = document.createTextNode(this.texto)
+            novoBotaoDom.appendChild(text)
+        }
+        else{
+            novoBotaoDom.innerHTML = this.texto
+        }
     }
+
 };
 
 let novoBotao =  new Botao('roxo','grande','Default')
@@ -24,7 +36,7 @@ botaoRoxo.desenhaBotao();
 let botaoRoxoTransparente = new Botao('borda-roxa', 'grande','Default')
 botaoRoxoTransparente.desenhaBotao();
 
-let botaoMore = new Botao('roxo', 'grande','⥤ Default')
+const botaoMore = new Botao('roxo', 'grande', ' Default ', 'fa-plus-circle')
 botaoMore.desenhaBotao();
 
 

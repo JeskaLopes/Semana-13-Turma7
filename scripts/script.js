@@ -6,16 +6,26 @@ const nomeDigitado = document.querySelector('#nome');
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function(e) {
+    e.preventDefault();
     const valor = nomeDigitado.value;
     const verificacao =  nomesNoRole.includes(nomeDigitado.value);
-    
+
 
     //if sempre entra no true caso o valor resultado seja true;
     if(verificacao){   
-        return alert('Opa tá sim')
+        return (
+        document.getElementById("nome").classList.add("is-valid"),
+        alert('Tava sim')
+        //alert('Opa tá sim')
+        )
+        
+        
     }
     else{
-        alert('Opa não tá')
+        return(
+            alert('Opa não tá')
+        )
+        
     }
 
     console.log({valor});
