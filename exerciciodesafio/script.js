@@ -35,18 +35,7 @@ exibirSorteados.addEventListener('click', (e) => {
     document.getElementById('table-section').innerHTML = insertRows(listaOrdenada)
 
 });
-exibirSorteados.addEventListener('click', (e) => {
-    const listaOrdenada = biblioteca.livros.sort((livroA,livroB) => orderList(livroA,livroB,"autor"))
-    document.getElementById('table-section').innerHTML = insertRows(listaOrdenada)
-
-});
-
-exibirSorteados.addEventListener('click', (e) => {
-    const listaOrdenada = biblioteca.livros.sort((livroA,livroB) => orderList(livroA,livroB,"autor"))
-    document.getElementById('table-section').innerHTML = insertRows(listaOrdenada)
-
-});
 
 exibirAutores.addEventListener('click', (e) =>{
-    document.getElementById('table-section').innerHTML = insertRows(biblioteca.autor)
+    document.getElementById('table-section').innerHTML = insertRows(biblioteca.livros)
 });
